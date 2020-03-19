@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Email Address Syntax Validate</name>
+        <name>NeedIt Debugging Practice</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -27,36 +27,46 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-    // Pass the Requested for email to the Script Include.  Store the return
-    // value from the Script Include in the isEmail variable
-    var isEmail = validateEmailAddress(current.u_requested_for_email);
-    // If isEmail is false (email address syntax is not valid) do not save
-    // the record.  Write an error message to the screen.
-    if(isEmail == false){
-        gs.addErrorMessage(current.u_requested_for_email + " is not a valid email address.  You must provide a valid email address.");
-        current.setAbortAction(true);
+    // Add your code here
+
+    var x = 7;
+
+    function numFunc() {
+        var x = 10;
+        return {
+            getNum: function() {
+                return x;
+            },
+            setNum: function(newNum) {
+                x = newNum;
+            }
+        };
     }
+    var callFunc = numFunc();
+    callFunc.getNum();
+    callFunc.setNum(2);
+    callFunc.getNum();
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-03-08 03:44:46</sys_created_on>
+        <sys_created_on>2020-03-19 04:37:01</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>01e885f69f513200bde5f79ff57fcf52</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Email Address Syntax Validate</sys_name>
+        <sys_id>fd0d460307ab40104cd1ff808c1ed086</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>NeedIt Debugging Practice</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_script_01e885f69f513200bde5f79ff57fcf52</sys_update_name>
+        <sys_update_name>sys_script_fd0d460307ab40104cd1ff808c1ed086</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-03-08 03:44:46</sys_updated_on>
+        <sys_updated_on>2020-03-19 04:57:09</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=01e885f69f513200bde5f79ff57fcf52"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=fd0d460307ab40104cd1ff808c1ed086"/>
 </record_update>
